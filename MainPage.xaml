@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Todo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            BackgroundColor="White"
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="todologo.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a hovercraft number nine" />
+
+            <Label
+                Text="Sign In"
+                FontSize="24"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                TextColor="Black"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <VerticalStackLayout Spacing="5">
+                <Label
+                    Text="Email"
+                    TextColor="Black"
+                    FontSize="16"
+                    FontAttributes="Bold"/>
+                <Entry x:Name="EmailEntry" Placeholder="juan.delaCruz@gmail.com" BackgroundColor="White" TextColor="Black"/>
+
+                <Label
+                  Text="Password"
+                    TextColor="Black"
+                  FontSize="16"
+                  FontAttributes="Bold"/>
+
+                <Grid>
+                    <Entry x:Name="PasswordEntry" Placeholder="Enter your password" BackgroundColor="White" IsPassword="True" TextColor="Black"/>
+                    <Button x:Name="TogglePasswordButton" Text="👁" Clicked="OnTogglePasswordVisibility" HorizontalOptions="End" VerticalOptions="Center" BackgroundColor="Transparent" BorderColor="Transparent" />
+                </Grid>
+            </VerticalStackLayout>
+
+            <Grid Padding="0,10,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox x:Name="RememberMeCheckBox" VerticalOptions="Center"/>
+                <Label Text="Remember me" VerticalOptions="Center" Grid.Column="1"/>
+                <Label Text="Forgot Password ?" TextColor="#4D81E7" HorizontalOptions="End" VerticalOptions="Center" Grid.Column="2"/>
+            </Grid>
+
+            <VerticalStackLayout Spacing="10">
+                <Button Text="Sign In" BackgroundColor="#393433" TextColor="White"/>
+                <Button Text="Sign Up" BackgroundColor="#393433" TextColor="White"/>
+            </VerticalStackLayout>
+
+            <VerticalStackLayout.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#D4C4BC" Offset="0" />
+                    <GradientStop Color="#CD5C24" Offset="1" />
+                    <GradientStop Color="#FFC56F" Offset="1"/>
+                </LinearGradientBrush>
+            </VerticalStackLayout.Background>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
+
+
